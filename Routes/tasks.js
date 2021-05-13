@@ -20,7 +20,7 @@ const tasksRoutes = (fastify, opts, next) => {
 
     fastify.patch(
         "/api/tasks/patch/desc/",
-        { schema: patchTaskDescBodySchema, attachValidation: true, [fastify.authenticate] },
+        { schema: patchTaskDescBodySchema, attachValidation: true, preValidation: [fastify.authenticate] },
         patchTaskDesc
     );
 
