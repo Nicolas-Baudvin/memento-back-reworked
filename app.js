@@ -4,6 +4,7 @@ const jwtCustomPlugin = require("./Plugin/auth");
 const userRoutes = require("./Routes/user");
 const boardRoutes = require("./Routes/board");
 const listRoutes = require('./Routes/list');
+const tasksRoutes = require("./Routes/tasks");
 require("dotenv").config();
 
 
@@ -38,6 +39,7 @@ function build(opts = {}) {
     app.register(userRoutes);
     app.register(boardRoutes);
     app.register(listRoutes);
+    app.register(tasksRoutes);
 
     return app;
 }
