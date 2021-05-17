@@ -21,7 +21,7 @@ const patchTasksOrder = async (req, reply) => {
             return list;
         });
 
-        await board.updateOne({ _id: boardID }, { lists: updatedLists });
+        await Board.updateOne({ _id: boardID }, { lists: updatedLists });
 
         const updatedBoard = await Board.findOne({ _id: boardID });
         const updatedBoards = await Board.find({ _id: boardID });
