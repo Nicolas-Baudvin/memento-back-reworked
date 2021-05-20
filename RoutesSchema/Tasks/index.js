@@ -71,7 +71,7 @@ exports.patchTasksOrderBodySchema = {
         properties: {
             sourceList: { type: "object" },
             boardID: { type: "string" },
-            tasks: { type: "object" },
+            tasks: { type: "array" },
         }
     },
     headers: authHeaders
